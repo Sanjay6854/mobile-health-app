@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <base href="$FLUTTER_BASE_HREF">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="A new Flutter project.">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="mha1">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png"/>
+
+  <title>mha1</title>
+  <link rel="manifest" href="manifest.json">
+
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-firestore.js"></script>
+
+  <script>
+    // Your Firebase config
+    const firebaseConfig = {
+      apiKey: "AIzaSyBTIDNA6vdfoL5xbh9hZTRHc4YE_0JoJCA",
+      authDomain: "mha1-9eca0.firebaseapp.com",
+      projectId: "mha1-9eca0",
+      storageBucket: "mha1-9eca0.firebasestorage.app",
+      messagingSenderId: "890170915182",
+      appId: "1:890170915182:web:456eaded1c731c814e297f",
+      measurementId: "G-2V75691J13"
+    };
+
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
+
+  <!-- Ensure Flutter app script is included -->
+  <script src="main.dart.js" defer></script>
+
+</head>
+<body>
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/firebase-messaging-sw.js')
+      .then((registration) => {
+        console.log("✅ Service Worker registered:", registration);
+      }).catch((err) => {
+        console.log("❌ Service Worker registration failed:", err);
+      });
+  }
+</script>
+<script defer src="https://payments.cashfree.com/sdk/1.0.0/cashfree.js"></script>
+<script src="flutter_bootstrap.js" async></script>
+</body>
+</html>
